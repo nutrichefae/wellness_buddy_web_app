@@ -3,11 +3,10 @@
 import { useMemo } from "react";
 import { checkArray } from "@/lib/formatter";
 import { availabilityOptionValue } from "@/lib/availability";
-import { useAppSelector } from "@/providers/global/hooks";
+import { useAssignableClientCategories } from "@/hooks/useAssignableClientCategories";
 
 export function useAvailabilityOptions() {
-  const client_categories =
-    useAppSelector((state) => state.coach?.data?.client_categories) || [];
+  const client_categories = useAssignableClientCategories();
 
   return useMemo(
     () => [
