@@ -133,6 +133,9 @@ export default function InputPinContainer() {
         <span>Enter your 4-digit PIN for </span>
         <span className="text-black">+91 {mobileNumber}</span>
       </p>
+      <p className="text-[13px] text-muted-foreground -mt-6 mb-6">
+        After 5 wrong tries we will suggest OTP. Your PIN will not lock.
+      </p>
       <InputOTP
         maxLength={4}
         value={pin}
